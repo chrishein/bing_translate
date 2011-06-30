@@ -1,4 +1,4 @@
-Microsoft Translator - Simple Ruby Client for Microsoft Translator API
+Bing Translate - Simple Ruby Client for Microsoft Translator API
 http://msdn.microsoft.com/en-us/library/ff512423.aspx
 
 Before you can use the HTTP interface you must obtain a valid Bing API AppID.
