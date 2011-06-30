@@ -1,0 +1,27 @@
+=Bing Translate - Simple Ruby Client for Microsoft Translator API
+http://msdn.microsoft.com/en-us/library/ff512423.aspx
+
+Before you can use the HTTP interface you must obtain a valid Bing API AppID.
+You may obtain one by visiting http://www.bing.com/developers/appids.aspx
+
+==Usage
+
+	from_language = 'es'
+	to_language = 'en'
+	@bt = Bing::Translator.new(from_language, to_language, {:app_id => 'YOUR_APP_ID'})
+	puts @bt.translate('perro')
+
+
+By default, the translator caches term translations in order to avoid unnecessary requests.
+This can be globally disabled passing:
+      :cache => false
+in the options hash.
+
+You can also skip the caching only for certain translation requests by passing
+	:cache => false 
+to the translate method.
+
+	@bt.translate('A longer sentence that won't likely be repeated', { :cache => false })
+
+==License
+Copyright © 2011 Christian Hein, released under the MIT license 
